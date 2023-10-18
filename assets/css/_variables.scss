@@ -1,0 +1,106 @@
+$white: #fff !default;
+$gray-50: #f9fafc !default;
+$gray-100: #f3f4f7 !default;
+$gray-200: #e8e9ee !default;
+$gray-300: #d8dbe2 !default;
+$gray-400: #bdc1cc !default;
+$gray-500: #9ca0b1 !default;
+$gray-600: #787e95 !default;
+$gray-700: #535a78 !default;
+$gray-800: #0b153e !default;
+$gray-900: #3a3b45 !default;
+
+$blue: #0fbcf9 !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #ff5e57 !default;
+$orange: #ffc048 !default;
+$yellow: #f6c23e !default;
+$green: #0be881 !default;
+$teal: #20c9a6 !default;
+$cyan: #36b9cc !default;
+$midnight: #1e272e !default;
+$asphalt: #34495e !default;
+$asbestos: #7f8c8d !default;
+$nephritis: #27ae60 !default;
+$greensea: #16a085 !default;
+$emerald: #2ecc71 !default;
+$turquoise: #1abc9c !default;
+$belize: #2980b9 !default;
+$river: #3498db !default;
+
+$primary: #1560f6;
+$secondary: $midnight;
+$success: #34d188;
+$danger: #ff4e66;
+$info: #2d8fff;
+$warning: #ffa953;
+$muted: #787e95;
+$border-color: #e6e6e6;
+$theme-colors: (
+  "blue": $blue,
+  "primary": $primary,
+  "purple": $purple,
+  "secondary": $secondary,
+  "success": $success,
+  "danger": $danger,
+  "warning": $warning,
+  "muted": $muted,
+  "gray-50": $gray-50,
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-500": $gray-500,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+  "white": $white,
+  "transparent": transparent,
+);
+$body-bg: $gray-50;
+
+//$font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Noto Color Emoji' !default;
+$font-family-sans-serif: "Inter", "Helvetica Neue", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$cursors: (
+  "auto",
+  "default",
+  "none",
+  "context-menu",
+  "help",
+  "pointer",
+  "progress",
+  "wait",
+  "cell",
+  "crosshair",
+  "text",
+  "vertical-text",
+  "alias",
+  "copy",
+  "move",
+  "no-drop",
+  "not-allowed",
+  "grab",
+  "grabbing",
+  "all-scroll",
+  "col-resize",
+  "row-resize",
+  "row-resize",
+  "n-resize",
+  "e-resize",
+  "s-resize",
+  "w-resize",
+  "ne-resize",
+  "nw-resize",
+  "se-resize",
+  "sw-resize",
+  "ew-resize",
+  "ns-resize",
+  "nesw-resize",
+  "zoom-in",
+  "zoom-out"
+);

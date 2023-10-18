@@ -1,0 +1,84 @@
+@each $color, $value in $theme-colors {
+  .text-#{$color} {
+    color: $value !important;
+  }
+
+  .text-#{$color}-on-hover {
+    &:hover {
+      color: $value !important;
+    }
+  }
+
+  .text-#{$color}-hoverable {
+    color: $value !important;
+
+    &:hover {
+      color: darken($value, 5%) !important;
+    }
+  }
+}
+
+// Grayscale Text Utilities
+.text-xxs {
+  font-size: 0.5rem;
+}
+
+.text-xs {
+  font-size: 0.7rem !important;
+}
+
+.text-sm {
+  font-size: 0.78rem !important;
+}
+
+.text-lg {
+  font-size: 1.2rem !important;
+}
+
+.text-12 {
+  font-size: 12px !important;
+}
+
+.text-14 {
+  font-size: 12px !important;
+}
+
+.text-yellow {
+  color: $yellow !important;
+}
+
+.text-normal {
+  font-size: 0.9rem !important;
+}
+
+.text {
+  &-midnight {
+    color: $midnight !important;
+  }
+}
+
+.icon-circle {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+h6,
+.h6 {
+  font-size: 0.9rem;
+}
+
+.__nuxt-error-page .description {
+  font-size: 14px;
+}
+
+.font-weight-medium {
+  font-weight: $headings-font-weight;
+}
