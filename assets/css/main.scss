@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    @import "fonts";
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
