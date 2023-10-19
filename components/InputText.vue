@@ -15,7 +15,7 @@
             </svg>
         </div>
         <div class="group rounded-md">
-            <form @submit.enter.prevent="EnterKeyEvent" class="w-full shadow-md">
+            <form @submit.enter.prevent="EnterKeyEvent" class="w-full">
                 <input v-model="inputText" @focus="data.isFocused = true" @blur="data.isFocused = false" type="text"
                     id="input-group-1" class="bg-gray-100 text-gray-600 text-sm block w-full pl-10 p-2.5 outline-none"
                     :placeholder="data.placeHolder" required>
