@@ -82,6 +82,18 @@ export const useTaskStore = defineStore("task", {
       }
     },
   },
+  getters: {
+    importantList() {
+      if (this.task) {
+        return this.task.filter((x) => x.is_important == true);
+      }
+    },
+    doneList() {
+      if (this.task) {
+        return this.task.filter((x) => x.is_done == true);
+      }
+    },
+  },
 });
 
 interface TaskInfo {
