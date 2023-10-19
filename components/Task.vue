@@ -14,7 +14,13 @@
                 class="text-md font-medium truncate text-gray-500 whitespace-normal overflow-hidden">{{
                     taskItem.title }}</p>
         </div>
-        <button id="delete" @click="toggleStar" class="flex-shrink-0 p-2 ml-auto">
+        <button id="personnel" @click="" class="flex-shrink-0 p-2 ml-auto">
+            <img v-if="taskItem.assignee.avatar" class="w-8 h-8 rounded-full" :src="taskItem.assignee.avatar"
+                :alt="taskItem.id">
+            <img v-else class="w-8 h-8 rounded-full"
+                src="https://i.pinimg.com/originals/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg" :alt="taskItem.id">
+        </button>
+        <button id="star" @click="toggleStar" class="flex-shrink-0 p-2 ml-auto">
             <svg class="w-6 h-6 text-gray-400 hover:text-yellow-500 cursor-pointer"
                 :class="{ 'text-yellow-500': taskItem.is_important }" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                 stroke-width="1.5" stroke="currentColor" viewBox="0 0 576 512">
