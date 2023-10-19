@@ -15,16 +15,18 @@ export const useTaskStore = defineStore("task", {
         console.error("Error on Fetching Tasks: ", error);
       }
     },
-    async createNewTask(data: TaskInfo) {
+    async createNewTask(data: string) {
       try {
         const config = useRuntimeConfig();
         const response = await $fetch(`${config.public.appUrl}/tasks`, {
           method: "POST",
           body: {
-            ...data,
+            title: data,
           },
         });
-        this.task.push(response);
+        if (this.task) {
+          this.task.push(response);
+        }
       } catch (error) {
         console.error("Error on Creating New Task: ", error);
       }
@@ -32,14 +34,14 @@ export const useTaskStore = defineStore("task", {
     async updateExistingTask(id: string, data: TaskInfo) {
       try {
         const config = useRuntimeConfig();
-        const response = await $fetch(`${config.public.appUrl}/tasks/${id}`, {
+        await $fetch(`${config.public.appUrl}/tasks/${id}`, {
           method: "PUT",
           body: {
             ...data,
           },
         });
         this.task.map((x) => {
-          x.id === response.id ? { ...x, ...reponse } : x;
+          x.id === data.id ? { ...x, ...data } : x;
         });
       } catch (error) {
         console.error("Error on Updating Exiting Task: ", error);
