@@ -52,7 +52,7 @@
                 <Task :task-item="item" />
             </li>
         </ul>
-        <div class="px-40 mt-auto fixed bottom-4 w-11/12">
+        <div class="px-40 mt-auto fixed bottom-4 lg:w-11/12 md:w-screen">
             <InputText :holder="holder" />
         </div>
     </div>
