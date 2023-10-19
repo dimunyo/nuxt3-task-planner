@@ -14,11 +14,10 @@
                     d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
             </svg>
         </div>
-        <div class="group">
-            <form @submit.enter.prevent="EnterKeyEvent" class="w-full">
+        <div class="group rounded-md">
+            <form @submit.enter.prevent="EnterKeyEvent" class="w-full shadow-md">
                 <input v-model="inputText" @focus="data.isFocused = true" @blur="data.isFocused = false" type="text"
-                    id="input-group-1"
-                    class="bg-gray-100 text-gray-600 text-sm rounded-md block w-full pl-10 p-2.5 outline-none"
+                    id="input-group-1" class="bg-gray-100 text-gray-600 text-sm block w-full pl-10 p-2.5 outline-none"
                     :placeholder="data.placeHolder" required>
             </form>
             <p class="text-gray-500 pt-1 text-sm">Press <span
