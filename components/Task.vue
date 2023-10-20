@@ -1,6 +1,7 @@
 <template>
-    <div class="flex items-center space-x-4 px-2 py-1.5 shadow-md rounded-sm">
-        <DeleteModal v-if="showModal" :id="taskItem.id" @close-modal="closeModal" />
+    <div class="flex items-center space-x-4 px-2 py-1.5 shadow-md rounded-sm" @dblclick="showUpdateModal">
+        <DeleteModal v-if="toggleDelete" :id="taskItem.id" @close-modal="closeDeleteModal" />
+        <UpdateModal v-if="toggleUpdate" :data="taskItem" @close-modal="closeUpdateModal" />
         <div class="flex flex-grow items-start p-2">
             <button @click="toggleDone">
                 <svg class="h-5 w-5 mr-5 text-gray-400" fill="currentColor" stroke="currentColor" stroke-width="1.5"
@@ -14,12 +15,15 @@
                 class="text-md font-medium truncate text-gray-500 whitespace-normal overflow-hidden">{{
                     taskItem.title }}</p>
         </div>
-        <button id="personnel" @click="" class="flex-shrink-0 p-2 ml-auto">
+        <button id="personnel" @click="toggleUser = !toggleUser" @blur="closeUserModal"
+            class="btn btn-relative flex-shrink-0 p-2 ml-auto">
             <img v-if="taskItem.assignee.avatar" class="w-8 h-8 rounded-full" :src="taskItem.assignee.avatar"
                 :alt="taskItem.id">
             <img v-else class="w-8 h-8 rounded-full"
                 src="https://i.pinimg.com/originals/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg" :alt="taskItem.id">
+            <DropDown v-if="toggleUser" :data="taskItem" @close-modal="closeUserModal" class="absolute z-40" />
         </button>
+
         <button id="star" @click="toggleStar" class="flex-shrink-0 p-2 ml-auto">
             <svg class="w-6 h-6 text-gray-400 hover:text-yellow-500 cursor-pointer"
                 :class="{ 'text-yellow-500': taskItem.is_important }" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -45,7 +49,9 @@ const store = useTaskStore();
 
 const { taskItem } = defineProps(['task-item']);
 
-const showModal = ref(false);
+const toggleDelete = ref(false);
+const toggleUpdate = ref(false);
+const toggleUser = ref(false);
 
 const toggleDone = async () => {
     taskItem.is_done = !taskItem.is_done;
@@ -58,9 +64,20 @@ const toggleStar = async () => {
 }
 
 const showDeleteModal = async () => {
-    showModal.value = true;
+    toggleDelete.value = true;
 }
-const closeModal = () => {
-    showModal.value = false;
+const closeDeleteModal = () => {
+    toggleDelete.value = false;
+}
+
+const showUpdateModal = async () => {
+    toggleUpdate.value = true;
+}
+const closeUpdateModal = () => {
+    toggleUpdate.value = false;
+}
+
+const closeUserModal = () => {
+    toggleUser.value = false;
 }
 </script>
