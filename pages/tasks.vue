@@ -47,8 +47,9 @@
                     placeholder="Search" required>
             </div>
         </form>
-        <ul v-for="item in task" :key="item.id" class="divide-y divide-gray-200 px-40 h-full w-full">
-            <li class="group cursor-pointer bg-gray-100 hover:bg-gray-200 w-100 rounded-md">
+        <ul class="divide-y space-y-3 divide-gray-200 px-40 h-full w-full">
+            <li v-for="item in task" :key="item.id"
+                class="group cursor-pointer bg-gray-100 hover:bg-gray-200 w-100 rounded-md">
                 <Task :task-item="item" />
             </li>
         </ul>
