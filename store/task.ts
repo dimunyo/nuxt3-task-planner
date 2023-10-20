@@ -1,7 +1,7 @@
 export const useTaskStore = defineStore("task", {
   state: () => ({
     task: null as TaskInfo | null,
-    user: null as UserInfo | null,
+    user: [] as UserInfo[],
   }),
   actions: {
     async fetchTasks() {
