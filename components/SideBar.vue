@@ -1,5 +1,5 @@
 <template>
-    <ul class="gap-y-2 block w-1/11">
+    <ul class="gap-y-2 block">
         <li class="flex items-center cursor-pointer hover:bg-gray-200">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                 class="w-6 h-6 m-2 text-blue-500">
@@ -62,7 +62,7 @@
             </svg>
 
             <a class="text-sm text-gray-500">Notifications</a>
-            <span class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-white bg-red-500 ">
+            <span class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-white bg-red-600 ">
                 2
             </span>
         </li>
