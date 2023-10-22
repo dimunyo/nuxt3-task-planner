@@ -62,7 +62,7 @@
             </svg>
 
             <a class="text-sm text-gray-500">Notifications</a>
-            <span class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-white bg-red-600 ">
+            <span class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-white bg-red-500 ">
                 2
             </span>
         </li>
