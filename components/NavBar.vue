@@ -70,11 +70,10 @@
                         <p class="font-semibold text-gray-900 text-sm">Reyven Biloy</p>
                         <p class="text-blue-500 text-sm">reyvenb@gmail.com</p>
                     </div>
-                    <img src="https://media.licdn.com/dms/image/C5603AQF_muMIR6-dJQ/profile-displayphoto-shrink_200_200/0/1516550625651?e=1703116800&v=beta&t=2lgjlBzXkMRBILSO8_Pec5-ZIRfUSfHCFc-HeqvgaM4"
-                        class="mr-2 border h-9 w-9 rounded-full">
+                    <img src="~/assets/images/avatar.jpg" class="mr-2 border h-9 w-9 rounded-full object-cover">
                     <button>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6">
+                            stroke="currentColor" class="w-6 h-6 text-gray-300">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                         </svg>
                     </button>
