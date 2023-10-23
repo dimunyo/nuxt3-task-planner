@@ -1,10 +1,10 @@
 **Project Overview:**
 
-This GitHub project is a Task Planner built with Nuxt 2, a popular framework for building web applications using Vue.js. The Task Planner is designed to help users efficiently manage tasks and projects.
+This GitHub project is a Task Planner built with Nuxt 3, a popular framework for building web applications using Vue.js. The Task Planner is designed to help users efficiently manage tasks and projects.
 
 **Key Technologies and Dependencies:**
 
-1. **Nuxt 2:** This project is based on Nuxt 2, a powerful framework that simplifies Vue.js development, providing server-side rendering, routing, and other essential features.
+1. **Nuxt 3:** This project is based on Nuxt 2, a powerful framework that simplifies Vue.js development, providing server-side rendering, routing, and other essential features.
 
 2. **Tailwind CSS:** Tailwind CSS is used for styling and layout. It's a utility-first CSS framework that enables rapid development and customization of the project's visual design.
 
